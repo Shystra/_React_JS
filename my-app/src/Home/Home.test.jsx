@@ -10,4 +10,4 @@ describe('<Home />', () => {
   it('test three', () => {
     expect(1).toBe(1);
   });
-})tirando
+})
