@@ -28,4 +28,9 @@ describe('<Button />', () => {
         expect(fn).toHaveBeenCalledTimes(1)
     });
 
+    it ('should be sisabled when disabled is true', () => {
+        render (<Button text="Load more" disabled={true} />);
+        const button = screen.getByRole('button', { name: /load more/i });
+        expect(button).toBeDisabled();
+    })
 
