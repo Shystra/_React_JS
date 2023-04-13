@@ -1,17 +1,13 @@
 import {render} from '@testing-library/react';
 import {PostCard} from '.';
+import { postCardPropsMock } from './mock';
 
-const mock = {
-    title: 'title 1',
-    body: 'body',
-    id: 1,
-    cover: 'img/img.png'
-};
+const props = postCardPropsMock;
 
 describe('<PostCard />', () => {
     it ('should render PostCard correctly', () => {
-        const {debug} = render(<PostCard {...mock} />);
+        render(<PostCard {...props} />);
         
-        debug();
+    
     })
 });
