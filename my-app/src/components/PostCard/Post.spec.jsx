@@ -8,6 +8,6 @@ describe('<PostCard />', () => {
     it('should render PostCard correctly', () => {
         render(<PostCard {...props} />);
         
-        expect(screen.getByRole('img', { name: /TITLE 1/i })).toBeInTheDocument();
+        expect(screen.getByRole('img', { name: /TITLE 1/i })).toHaveAttribute('src', 'img/img.png');
     });
 });
