@@ -12,6 +12,7 @@ describe('<PostCard />', () => {
             .toHaveAttribute('src', 'img/img.png');
         expect(screen.getByRole('heading', {name: /TITLE 1/i }))
             .toBeInTheDocument();
+        expect(screen.getByText('body')).toBeInTheDocument();
         
 
     });
