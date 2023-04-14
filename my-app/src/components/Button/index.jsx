@@ -1,3 +1,4 @@
+import P from 'prop-types';
 import './styles.css';
 
 //import { Component } from "react";
@@ -23,3 +24,13 @@ export const Button = ({ text, onClick, disabled }) => (
       {text}
     </button>
   );
+
+Button.defaltProps = {
+    disabled: false,
+};
+
+Button.propTypes = {
+    text: P.string.isRequired,
+    onClick: P.func.isRequired,
+    disabled: P.bool,
+};
